@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce - Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="nombre-sitio">Tienda <span>Muebles</span> </h1>
+    </header>
+
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+    <main class="contenido-principal contenedor">
+        <h2 class="text-center">Contactanos</h2>
+        <form class="formulario">
+            <fieldset>
+                <!--permite organizar en grupos los campos de un formulario.-->
+                <legend>Tus Datos</legend>
+                <!--<legend>crea un título para un grupo de campos (<fieldset>) de un formulario.-->
+                <div class="campo">
+                    <!--Encerrar en un div los inputs les pone display: block, y tambien es mas facil darle estilos-->
+                    <label for="nombre">Nombre: </label>
+                    <!--for= "(el id del input)" permite que al dar click en el texto del label, nos posiciona para escribir en el input directamente  -->
+                    <input class="input-1" id="nombre" type="text" placeholder="Tu Nombre" required>
+                    <!--el id es para relacionarlo con un label-->
+                </div>
+                <div class="campo">
+                    <label for="asunto">Asunto: </label>
+                    <input class="input-1" id="asunto" type="text" placeholder="Tu Asunto" required>
+                </div>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input class="input-1" id="email" type="email" placeholder="Tu Email" required>
+                </div>
+                <div class="campo">
+                    <label for="tel">Telefono: </label>
+                    <input class="input-1" id="tel" type="tel" placeholder="Tu Telefono" required>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea class="input-1" name="" id="mensaje" cols="30" rows="15"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>País</legend>
+                <div class="campo">
+                    <label for="pais">País</label>
+                    <select class="input-1" name="" id="pais" required>
+                        <!--<select>permite dar opciones para que el usuario elija-->
+                        <!--<option> son las opciones-->
+                        <option disabled value="">-- Seleccione --</option>
+                        <!--disable no deja elegir esta opcion-->
+                        <option selected value="AR">Argentina</option>
+                        <!--selected, deja esta opcion seleccionada de forma predeterminada-->
+                        <option value="MX">México</option>
+                        <option value="PR">Perú</option>
+                        <option value="ES">España</option>
+                        <option value="CL">Chile</option>
+                        <option value="CO">Colombia</option>
+                        <option value="UY">Uruguay</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Información Extra</legend>
+                <div class="campo">
+                    <!--cuando quieres que el usuario, de muchos inputs de tipo radio marque solo uno, debes ponerle el mismo name a todos -->
+                    <label for="cliente"> Cliente</label>
+                    <input id="cliente" type="radio" name="tipo" required>
+                </div>
+                <div class="campo">
+                    <label for="proveedor"> Proveedor</label>
+                    <input id="proveedor" type="radio" name="tipo">
+                </div>
+                <div class="campo">
+                    <label for="categoria">Categoria de Interés</label>
+                    <!--<datalist> permite al usuario elegir opciones de una forma distinta al <select>-->
+                    <input class="input-1" list="categorias" name="categorias">
+                    <datalist id="categorias">
+                        <option value="Cocina">
+                        <option value="Exterior">
+                        <option value="Recamara">
+                        <option value="Oficina">
+                        <option value="Television">
+                    </datalist>
+                </div>
+            </fieldset>
+            <input class="btn" type="submit" value="Enviar Formulario">
+        </form>
+    </main>
+    <footer>
+        <div class="seccion-footer">
+            <div class=" contenedor grid-footer ">
+                <div class="enlaces-footer">
+                    <h3>Categorias</h3>
+                    <nav>
+                        <a href="#">Cocina</a>
+                        <a href="#">Oficina</a>
+                        <a href="#">Jardin</a>
+                        <a href="#">Cochera</a>
+                        <a href="#">Dormitorios</a>
+                    </nav>
+                </div>
+
+                <div class="enlaces-footer">
+                    <h3>Sobre Nosotros</h3>
+                    <nav>
+                        <a href="#">Nuestra Historia</a>
+                        <a href="#">Mision, Vision y Valores</a>
+                        <a href="#">Carreras</a>
+                        <a href="#">Politica de Privacidad</a>
+                        <a href="#">Terminos de Servicio</a>
+                    </nav>
+                </div>
+
+                <div class="enlaces-footer">
+                    <h3>Soporte</h3>
+                    <nav>
+                        <a href="#">Preguntas Frecuentes</a>
+                        <a href="#">Ayuda en linea</a>
+                        <a href="#">Confianza y Seguridad</a>
+                    </nav>
+                </div>
+            </div>
+
+            <p class="copyright">Todos los derechos reservados. Tienda<span>Muebles</span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
